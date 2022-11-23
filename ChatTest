@@ -31,9 +31,15 @@
 			//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 			//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 			//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-		       var firstName = 'Jaya';
+		       const queryString = window.location.search; 
+               const urlParams = new URLSearchParams(queryString); 
+               const page_type = urlParams.get('page_prmId');
+               console.log(page_type);
+
+                var firstName = 'Jaya';
                var lastName = 'B';
-               var prmId = '8832466522';
+               var prmId = page_type;
+               //var prmId = '8832466522';
                var crmId = '';
 
               
