@@ -32,9 +32,13 @@
 			//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 			//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 		       const queryString = window.location.search; 
-               const urlParams = new URLSearchParams(queryString); 
+		        console.log (queryString);
+               const urlParams = new URLSearchParams(queryString);
+	        console.log (urlParams);
                const page_type = urlParams.get('page_prmId');
                console.log(page_type);
+	      
+	      
 
                 var firstName = 'Jaya';
                var lastName = 'B';
