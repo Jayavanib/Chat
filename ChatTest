@@ -34,7 +34,7 @@
 			//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 		const param = window.location.search; 
 		console.log (param);
-                const urlParams = new URLSearchParams(queryString);
+                const urlParams = new URLSearchParams(param);
 	        console.log (urlParams);
                 const pagetype = urlParams.get('prmId');
                 console.log(pagetype);
