@@ -31,12 +31,16 @@
 			//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 			//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 			//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-		       const queryString = window.location.search; 
-		        console.log (queryString);
-               const urlParams = new URLSearchParams(queryString);
-	        console.log (urlParams);
-               const pagetype = urlParams.get('prmId');
-               console.log(pagetype);
+		       //const queryString = window.location.search; 
+		        //console.log (queryString);
+               //const urlParams = new URLSearchParams(queryString);
+	       // console.log (urlParams);
+              // const pagetype = urlParams.get('prmId');
+              // console.log(pagetype);
+	      function getParameter(parameterName){
+	      let parameters =new URLSearchParams(window.location.search);
+	      return parameters.get(parameterName);
+	      }
 	      
 	      
 
