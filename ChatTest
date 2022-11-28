@@ -35,14 +35,14 @@
 		        console.log (queryString);
                const urlParams = new URLSearchParams(queryString);
 	        console.log (urlParams);
-               const page_type = urlParams.get('page_type');
-               console.log(page_type);
+               const pagetype = urlParams.get('pagetype');
+               console.log(pagetype);
 	      
 	      
 
                 var firstName = 'Jaya';
                var lastName = 'B';
-               var prmId = page_type;
+               var prmId = pagetype;
                //var prmId = '8832466522';
                var crmId = '';
 
