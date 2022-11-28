@@ -38,6 +38,8 @@
 	        console.log ("xyz:", urlParams);
                 const pagetype = urlParams.get('prmId');
                 console.log("result:", pagetype);
+		pagetype.set('prmId', PRM_ID__c);
+		console.log("result1:", PRM_ID__c);
 	      
 	      
 	      
