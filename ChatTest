@@ -35,7 +35,7 @@
 		        console.log (queryString);
                const urlParams = new URLSearchParams(queryString);
 	        console.log (urlParams);
-               const pagetype = urlParams.get('pagetype');
+               const pagetype = urlParams.get('prmId');
                console.log(pagetype);
 	      
 	      
