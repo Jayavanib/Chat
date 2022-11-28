@@ -44,7 +44,7 @@
 
                 var firstName = 'Jaya';
                var lastName = 'B';
-               var prmId = pagetype;
+               var prmId = prmId;
                //var prmId = '8832466522';
                var crmId = '';
 
