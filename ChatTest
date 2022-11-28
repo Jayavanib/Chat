@@ -38,15 +38,15 @@
 	        console.log ("xyz:", urlParams);
                 const pagetype = urlParams.get('prmId');
                 console.log("result:", pagetype);
-		pagetype.set('PRM_ID__c', 'prmId');
-		console.log("result1:", 'PRM_ID__c');
+		
 	      
 	      
 	      
 
                 var firstName = 'Jaya';
                var lastName = 'B';
-               var prmId = prmId;
+               var prmId = pagetype;
+	       console.log("final:", prmId); 
                //var prmId = '8832466522';
                var crmId = '';
 
