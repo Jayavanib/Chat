@@ -13,6 +13,35 @@
 	<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 	<script type='text/javascript'>
 		var initESW = function(gslbBaseURL) {
+		let newMsg = "A HUMIRA Complete Specialist will be with you shortly. Thank you for your patience. If preferred, please call HUMIRA Complete at <b>1.800.4HUMIRA</b> (1.800.448.6472), Monday to Friday, from 8 AM to 8 PM EST."; //Message to be show when >3.
+        let defMsg = "A HUMIRA Complete Specialist will be with you shortly. <b>Thank you for your patience.</b>"; //Default Message
+        
+			embedded_svc.addEventHandler("onChatRequestSuccess",async function(data) {   
+			await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for the elements to get rendered first
+				try { 
+						let queueValue = $('.queuePositionCounter:first').text();
+						let queueMsg = $('.queuePositionMessage p:first-child');
+					if(parseInt(queueValue) > 3 ){ 
+						queueMsg.html(newMsg);
+						}else{
+						queueMsg.html(defMsg); //Default label
+						} 
+						}
+				catch(err) { 
+						}
+					});
+			embedded_svc.addEventHandler("onQueueUpdate", function(data) {
+			try {
+				let queueMsg = $('.queuePositionMessage p:first-child');
+			if(parseInt(data.queuePosition) > 3 ){ 
+				queueMsg.html(newMsg);
+					}else{
+				queueMsg.html(defMsg); //Default label
+				} 
+			}
+			catch(err) {
+		}
+		});
 			embedded_svc.settings.displayHelpButton = true; //Or false
 			embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 			console.log("code is working");
