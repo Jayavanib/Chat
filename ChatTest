@@ -14,7 +14,7 @@
 	<script type='text/javascript'>
 		var initESW = function(gslbBaseURL) {
 		let newMsg = "A HUMIRA Complete Specialist will be with you shortly. Thank you for your patience. If preferred, please call HUMIRA Complete at <b>1.800.4HUMIRA</b> (1.800.448.6472), Monday to Friday, from 8 AM to 8 PM EST."; //Message to be show when >3.
-        let defMsg = "A HUMIRA Complete Specialist will be with you shortly. <b>Thank you for your patience.</b>"; //Default Message
+        let defMsg = "A HUMIRA Complete Specialist will be with you shortly. Thank you for your patience."; //Default Message
         
 			embedded_svc.addEventHandler("onChatRequestSuccess",async function(data) {   
 			await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for the elements to get rendered first
