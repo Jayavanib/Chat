@@ -21,7 +21,7 @@
 				try { 
 						let queueValue = $('.queuePositionCounter:first').text();
 						let queueMsg = $('.queuePositionMessage p:first-child');
-					if(parseInt(queueValue) > 3 ){ 
+					if(parseInt(queueValue) > 1 ){ 
 						queueMsg.html(newMsg);
 						}else{
 						queueMsg.html(defMsg); //Default label
@@ -33,7 +33,7 @@
 			embedded_svc.addEventHandler("onQueueUpdate", function(data) {
 			try {
 				let queueMsg = $('.queuePositionMessage p:first-child');
-			if(parseInt(data.queuePosition) > 3 ){ 
+			if(parseInt(data.queuePosition) > 1 ){ 
 				queueMsg.html(newMsg);
 					}else{
 				queueMsg.html(defMsg); //Default label
