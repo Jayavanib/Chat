@@ -100,12 +100,12 @@
 							}];
 
                             embedded_svc.settings.prepopulatedPrechatFields = {
-                                "FirstName": firstName, 
+                                FirstName: firstName, 
 			                    "LastName": lastName, 
-                                "PRM_ID__c": prmId,
-                                "PS_PPMId__c" : prmId,
-                                "PS_crmID__c": crmId,
-                                "PS_ProductName__c":'Skyrizi'
+                                PRM_ID__c: prmId,
+                                PS_PPMId__c : prmId,
+                                PS_crmID__c: crmId,
+                                PS_ProductName__c:'Skyrizi'
 		              };
 
 	        console.log("after setting prechat Info");
