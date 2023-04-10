@@ -102,7 +102,7 @@
                             embedded_svc.settings.prepopulatedPrechatFields = {
                                 FirstName: firstName, 
 			                    "LastName": lastName, 
-                                PRM_ID__c: prmId,
+                                //PRM_ID__c: prmId,
                                 PS_PPMId__c : prmId,
                                 PS_crmID__c: crmId,
                                 PS_ProductName__c:'Skyrizi'
