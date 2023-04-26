@@ -21,13 +21,16 @@
         
 			embedded_svc.addEventHandler("onChatRequestSuccess",async function(data) {   
 			await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for the elements to get rendered first
+			console.log('Firstdebug');
 				try { 
 						let queueValue = $('.queuePositionCounter:first').text();
+						console.log('queueValue--'+queueValue);
 						let queueMsg = $('.queuePositionMessage p:first-child');
 					if(parseInt(queueValue) > 1 ){ 
+					console.log('queueValue1--'+queueValue);
 						queueMsg.html(newMsg);
 						}else{
-						queueMsg.html(newMsg); //Default label
+						queueMsg.html(defMsg); //Default label
 						} 
 						}
 				catch(err) { 
@@ -36,10 +39,12 @@
 			embedded_svc.addEventHandler("onQueueUpdate", function(data) {
 			try {
 				let queueMsg = $('.queuePositionMessage p:first-child');
+				console.log('queueMsg--'+queueMsg);
 			if(parseInt(data.queuePosition) > 1 ){ 
+				console.log('queuePosition--'+queuePosition);
 				queueMsg.html(newMsg);
 					}else{
-				queueMsg.html(newMsg); //Default label
+				queueMsg.html(defMsg); //Default label
 				} 
 			}
 			catch(err) {
@@ -48,11 +53,13 @@
 			embedded_svc.addEventHandler("onAvailability", function(data) {
 			try {
 				let queueValue = $('.queuePositionCounter:first').text();
+				console.log('queueValue4--'+queueValue);
 				let queueMsg = $('.queuePositionMessage p:first-child');
 			if(parseInt(queueValue) > 1 ){ 
+			console.log('queueValue3--'+queueValue);
 				queueMsg.html(newMsg);
 			}else{
-				queueMsg.html(newMsg); //Default label
+				queueMsg.html(defMsg); //Default label
 			} 
 		}
 			catch(err) {
